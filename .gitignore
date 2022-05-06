@@ -1,0 +1,14 @@
+node_modules
+.env.test
+.env
+.env.development
+.env.production
+.env.staging
+.env.production.local
+.env.staging.local
+.env.development.local
+.env.test.local
+.env.local
+dist
+/dist
+.husky/_

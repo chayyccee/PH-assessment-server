@@ -1,0 +1,63 @@
+{
+  "name": "partner_hero_server",
+  "version": "1.0.0",
+  "description": "Partner hero full stack assessment server side.",
+  "main": "/src/main.ts",
+  "scripts": {
+    "start": "node dist/main.js",
+    "postinstall": "tsc",
+    "deploy": "git push heroku main",
+    "dev": "tsnd --exit-child --transpile-only src/main.ts",
+    "lint": "eslint src/**/*.ts",
+    "lint-fix": "eslint --fix src/**/*.ts",
+    "pretty": "prettier --write 'src/**/*.ts'",
+    "prepare": "husky install",
+    "precommit": "npm run lint-fix && npm run pretty",
+    "prepush": "npm run lint",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "spotify",
+    "api",
+    "express",
+    "typescript"
+  ],
+  "author": "Chinedu K. Eke",
+  "license": "ISC",
+  "dependencies": {
+    "@typegoose/typegoose": "^9.8.1",
+    "axios": "^0.26.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "helmet": "^5.0.2",
+    "http-status-codes": "^2.2.0",
+    "mongoose": "^6.3.1",
+    "mongoose-slug-generator": "^1.0.4",
+    "pino": "^7.11.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.5.0",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^7.0.4",
+    "jest": "^28.0.3",
+    "pino-pretty": "^7.6.1",
+    "supertest": "^6.2.3",
+    "ts-jest": "^28.0.1",
+    "ts-node-dev": "^1.1.8"
+  },
+  "engines": {
+    "node": "16.14.0",
+    "npm": "8.9.0"
+  }
+}
